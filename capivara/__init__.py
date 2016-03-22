@@ -4,7 +4,7 @@ capivara
 ~~~~~~~~
 :copyright: (c) 2016 by Raphael Amorim.
 """
-from .api import get_DOM
+from .api import init
 
 __title__ = 'capivara'
 __version__ = '0.0.1'
