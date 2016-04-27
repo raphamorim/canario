@@ -1,6 +1,6 @@
-# Capivara.py
+# Capivara.py (not available for use yet)
 
-> Generates/obtain Document Object Model
+> Generates & Obtain DOM (Document Object Model)
 
 Capivara is a library that allows your python obtain the DOM from webpages. Being a excelent tool to test client-side behavior.
 
@@ -41,15 +41,23 @@ assert.equal(element.textContext, "You shall not pass!!") # true
 
 Returns the first element that is a descendant of the element on which it is invoked that matches the specified group of selectors.
 
-```
+```py
 element = document.querySelector('.container')
 ```
 
 ## Notes
 
-The capivara is unable to deliver all the properties of the element. However he can deliver the following properties:
+The capivara is unable to deliver all the properties of the element.
+
+However he can deliver the following properties:
 
 `style`, `classList`, `textContext`, `baseURI`, `className`, `clientHeight`, `clientLeft`, `clientTop`, `clientWidth`, `firstChild`, `title`, `string`, `tagName`, `tabIndex`, `outerHTML`, `localeString`, `localName`, `dir`, `scrollLeft`, `scrollHeight`, `scrollWidth`, `scrollTop`
+
+## Roadmap
+
+- Read element propeties after a specified event
+- Support `addEventListener` method
+- Support elements methods (like `element.classList.add`, `element.innerHTML`)
 
 ## Contributing
 
