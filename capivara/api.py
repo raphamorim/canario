@@ -1,11 +1,6 @@
 import sys, os
 import subprocess, json
 
-# TODO: create file from settings
-# TODO: create procedures functions like (filterByProps)
-# TODO: filter object in script.js using mask
-
-# TODO: on install needs permission to write in script.js file
 # TODO: on install donwload and install phantomjs binary
 
 class _capivara(object):
@@ -50,7 +45,6 @@ class _capivara(object):
             stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
         output, error = process.communicate()
-        print output
         dom_object = json.loads(output)
 
         if not error:

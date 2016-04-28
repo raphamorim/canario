@@ -5,13 +5,14 @@ from setuptools import setup
 
 setup(
     name='capivara',
-    version='0.0.1',
-    description='Generates/obtain Document Object Model',
+    version='1.0.0',
+    description='Generates & Obtain DOM (Document Object Model)',
     author='Raphael Amorim',
     author_email='rapha850@gmail',
+    keywords='dom javascript object model development',
     url='https://github.com/raphamorim/capivara',
     packages=['capivara'],
-    install_requires=[],
+    install_requires=['nose'],
     include_package_data=True,
     license='Apache 2.0',
     classifiers=[
