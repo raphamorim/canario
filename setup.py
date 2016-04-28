@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='capivara',
-    version='1.0.1',
+    version='1.0.2',
     description='Generates & Obtain DOM (Document Object Model)',
     author='Raphael Amorim',
     author_email='rapha850@gmail',

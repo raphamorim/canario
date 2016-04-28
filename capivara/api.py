@@ -1,5 +1,6 @@
 import sys, os
 import subprocess, json
+import pkg_resources
 
 # TODO: on install donwload and install phantomjs binary
 
@@ -15,21 +16,23 @@ class _capivara(object):
     def __call__(self, func):
         return self.execute()
 
+    def procedure(self, procedure):
+        resource_package = __name__
+        resource_path = os.path.join('../procedures', procedure + '.js')
+        resource = pkg_resources.resource_string(resource_package, resource_path)
+        return resource
+
     def mountInit(self, port):
-        procedure_init = open('procedures/init.js', 'r')
+        procedure = self.procedure('init')
         init = [
-            str(procedure_init.read()),
+            procedure,
             "page.open('http://127.0.0.1:{}'".format(port),
             ",function(s){ var element = page.evaluate(function () {", ]
 
-        procedure_init.close()
         return "".join(init)
 
     def mountExit(self):
-        procedure_end = open('procedures/end.js', 'r')
-        exit = str(procedure_end.read())
-        procedure_end.close()
-        return exit
+        return self.procedure('end')
 
     def querySelector(self, selector=None):
         file = open('script.js','w')
