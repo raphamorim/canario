@@ -1,6 +1,5 @@
-Capivara.py (not available for use yet)
+Capivara.py (No longer maintained)
 =======================================
-
 
 Generates & Obtain DOM (Document Object Model)
 
